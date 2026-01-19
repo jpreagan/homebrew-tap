@@ -1,25 +1,25 @@
 class Llmnop < Formula
   desc "A command-line tool for benchmarking the performance of LLM inference endpoints."
   homepage "https://github.com/jpreagan/llmnop"
-  version "0.5.0"
+  version "0.6.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/jpreagan/llmnop/releases/download/v0.5.0/llmnop-aarch64-apple-darwin.tar.xz"
-      sha256 "5496b48e66e642ff8c3375b9ac4707bad2303230e451b3da967ca73f7ccf40b0"
+      url "https://github.com/jpreagan/llmnop/releases/download/v0.6.0/llmnop-aarch64-apple-darwin.tar.xz"
+      sha256 "a4474043ebeb08535b3bef7f0cad5d531da089a3fe903852ab823f10709704c2"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/jpreagan/llmnop/releases/download/v0.5.0/llmnop-x86_64-apple-darwin.tar.xz"
-      sha256 "3d94a174f528f12db068d102855889d1f2c81276315f2e7c1a7b57f25e8ee730"
+      url "https://github.com/jpreagan/llmnop/releases/download/v0.6.0/llmnop-x86_64-apple-darwin.tar.xz"
+      sha256 "177c1ee10d179f4607cee98f59dd0fa4c5a113bac995dde58150bd1ee8a5f0df"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/jpreagan/llmnop/releases/download/v0.5.0/llmnop-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "f71466ae0cdb7ee77ecb5262b3ee9aadfe7aad86c994ad9c30d58c39a37b1be5"
+      url "https://github.com/jpreagan/llmnop/releases/download/v0.6.0/llmnop-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "046e71a50cbfede1a3d2c7cdd15c93c1842bf90e04bf7e2dd7c3a9f5f5b8aa84"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/jpreagan/llmnop/releases/download/v0.5.0/llmnop-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "0fc3c24cb2b0ee62954f2fac5744edf1e8b8624ddbef21e3cca47e4a83a694e3"
+      url "https://github.com/jpreagan/llmnop/releases/download/v0.6.0/llmnop-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "ea52b2a6c331af39f8c7caea3d50e93d04c04ac1fc01082bf66b46194df1d5e8"
     end
   end
   license "Apache-2.0"
