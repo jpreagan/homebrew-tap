@@ -5,21 +5,21 @@
 class Imsgctl < Formula
   desc "Portable CLI for querying imsgkit message data"
   homepage "https://github.com/jpreagan/imsgkit"
-  version "0.2.0"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jpreagan/imsgkit/releases/download/imsgctl%2Fv0.2.0/imsgctl_0.2.0_darwin_amd64.tar.gz"
-      sha256 "764d4f27d1113e7ac15ec93152de2aae0e4168edca12828c34b927a9bfd6b098"
+      url "https://github.com/jpreagan/imsgkit/releases/download/imsgctl%2Fv0.3.0/imsgctl_0.3.0_darwin_amd64.tar.gz"
+      sha256 "42876853b973c13e16260be9b2cfd8ff97704f5ec0ac3ca83889209a0b5ff72a"
 
       define_method(:install) do
         bin.install "imsgctl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jpreagan/imsgkit/releases/download/imsgctl%2Fv0.2.0/imsgctl_0.2.0_darwin_arm64.tar.gz"
-      sha256 "272260cea3926a31927afa18c9994df574911464705704b8b20d824979fd1888"
+      url "https://github.com/jpreagan/imsgkit/releases/download/imsgctl%2Fv0.3.0/imsgctl_0.3.0_darwin_arm64.tar.gz"
+      sha256 "42a4d8eaef7fa60a788d06b650f289223a6c5361add3d4cfcc306fa312401fa8"
 
       define_method(:install) do
         bin.install "imsgctl"
@@ -29,15 +29,15 @@ class Imsgctl < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jpreagan/imsgkit/releases/download/imsgctl%2Fv0.2.0/imsgctl_0.2.0_linux_amd64.tar.gz"
-      sha256 "4b4ab40bf33a935385a46cd9530c51e2b515002ca894c995a4d1ea24eed5d47d"
+      url "https://github.com/jpreagan/imsgkit/releases/download/imsgctl%2Fv0.3.0/imsgctl_0.3.0_linux_amd64.tar.gz"
+      sha256 "c3b5f2c4e2c1ef29903d3860be23754042b122c65557ef8839ec5e87a81ebdc3"
       define_method(:install) do
         bin.install "imsgctl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jpreagan/imsgkit/releases/download/imsgctl%2Fv0.2.0/imsgctl_0.2.0_linux_arm64.tar.gz"
-      sha256 "f29c8e74248aa20abeb79b622d4c6477d25ececded72ff028b6fada24cce58f0"
+      url "https://github.com/jpreagan/imsgkit/releases/download/imsgctl%2Fv0.3.0/imsgctl_0.3.0_linux_arm64.tar.gz"
+      sha256 "a2af6591678587de800776e9c7eb49216d904ec9fa715ab66d67c6b4842f024c"
       define_method(:install) do
         bin.install "imsgctl"
       end
