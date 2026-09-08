@@ -1,25 +1,25 @@
 class Llmnop < Formula
   desc "A command-line tool for benchmarking the performance of LLM inference endpoints."
   homepage "https://github.com/jpreagan/llmnop"
-  version "0.10.0"
+  version "0.11.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/jpreagan/llmnop/releases/download/v0.10.0/llmnop-aarch64-apple-darwin.tar.xz"
-      sha256 "58b30841e5ee23a4b35e47665bb9dae7b1aebc764bae8bc7f89d4c49879a4171"
+      url "https://github.com/jpreagan/llmnop/releases/download/v0.11.0/llmnop-aarch64-apple-darwin.tar.xz"
+      sha256 "60d5ef664faf6a2d0934450ae8e1a673395b0bd5d906d6376fe1efa1e2bd09df"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/jpreagan/llmnop/releases/download/v0.10.0/llmnop-x86_64-apple-darwin.tar.xz"
-      sha256 "a8ce3bb55984b12e36b3d262c2c7489d9d0f57cda6ec6ca1684c15d5454fb4ff"
+      url "https://github.com/jpreagan/llmnop/releases/download/v0.11.0/llmnop-x86_64-apple-darwin.tar.xz"
+      sha256 "77cf6d3e9b93692239f257276bbc81d3833c4d18875e778f89184220c734342a"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/jpreagan/llmnop/releases/download/v0.10.0/llmnop-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "5cdde6e086e5b4a35ad7129ccbc8886df079eea047a5133be51a5119136f16a1"
+      url "https://github.com/jpreagan/llmnop/releases/download/v0.11.0/llmnop-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "8472850ef8eea70aceeade53fa8af111a00fc2ec930e187d19b9d89d3f487252"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/jpreagan/llmnop/releases/download/v0.10.0/llmnop-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "164d56d30e1be4ff47a34dae42a7374e4aa87fd8c46af8f82b291aac48dd1c55"
+      url "https://github.com/jpreagan/llmnop/releases/download/v0.11.0/llmnop-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "2eefefb10d9f8f5669653917b49bbc220f80b30f2534352dbb1dd4f23b678b36"
     end
   end
   license "Apache-2.0"
@@ -48,10 +48,18 @@ class Llmnop < Formula
   end
 
   def install
-    bin.install "llmnop" if OS.mac? && Hardware::CPU.arm?
-    bin.install "llmnop" if OS.mac? && Hardware::CPU.intel?
-    bin.install "llmnop" if OS.linux? && Hardware::CPU.arm?
-    bin.install "llmnop" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "llmnop"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "llmnop"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "llmnop"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "llmnop"
+    end
 
     install_binary_aliases!
 
